@@ -22,4 +22,4 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "quest"
-include(":app")
+include(":app", "theme")

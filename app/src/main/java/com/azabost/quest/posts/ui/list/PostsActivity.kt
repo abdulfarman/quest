@@ -28,7 +28,7 @@ import com.azabost.quest.analytics.Analytics
 import com.azabost.quest.analytics.AnalyticsEvent
 import com.azabost.quest.posts.model.Post
 import com.azabost.quest.posts.ui.details.PostDetailsActivity
-import com.azabost.quest.theme.QuestTheme
+import com.azabost.theme.QuestTheme
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
