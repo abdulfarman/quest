@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "com.azabost.lifecycle"
+    namespace = "com.azabost.logger"
     compileSdk = Config.compileSdk
 
     defaultConfig {
@@ -36,9 +36,9 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":logger"))
     implementation(project(":common_logger"))
-    implementation(project(":share"))
+    implementation(project(":config"))
+    implementation(project(":analytics")) //Circular dependency with analytics
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -37,7 +37,7 @@ kotlin {
 
 dependencies {
     implementation(project(":theme"))
-    implementation(project(":logging"))
+    implementation(project(":logger"))
     implementation(project(":network"))
     implementation(project(":share"))
     implementation(project(":time"))

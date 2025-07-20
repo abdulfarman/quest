@@ -1,7 +1,7 @@
 package com.azabost.lifecycle
 
 import android.app.Application
-import com.azabost.share.share.SharingActivityHolder
+import com.azabost.share.SharingActivityHolder
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

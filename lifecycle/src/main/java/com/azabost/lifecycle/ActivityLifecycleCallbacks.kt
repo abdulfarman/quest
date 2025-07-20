@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.os.Bundle
 import com.azabost.common_logger.Logger
-import com.azabost.share.share.SharingActivityHolder
+import com.azabost.share.SharingActivityHolder
 import java.lang.ref.WeakReference
 import javax.inject.Inject
 import javax.inject.Singleton

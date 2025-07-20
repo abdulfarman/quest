@@ -27,7 +27,7 @@
             <option value="$PROJECT_DIR$/common_logger" />
             <option value="$PROJECT_DIR$/config" />
             <option value="$PROJECT_DIR$/lifecycle" />
-            <option value="$PROJECT_DIR$/logging" />
+            <option value="$PROJECT_DIR$/logger" />
             <option value="$PROJECT_DIR$/network" />
             <option value="$PROJECT_DIR$/posts" />
             <option value="$PROJECT_DIR$/serialization" />

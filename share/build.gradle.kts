@@ -37,7 +37,7 @@ kotlin {
 
 dependencies {
     implementation(project(":analytics"))
-    implementation(project(":logging"))
+    implementation(project(":logger"))
     implementation(project(":common_logger"))
 
 

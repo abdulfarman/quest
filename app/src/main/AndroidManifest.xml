@@ -27,8 +27,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.azabost.posts.posts.ui.list.PostsActivity" />
-        <activity android:name="com.azabost.posts.posts.ui.details.PostDetailsActivity" />
+        <activity android:name="com.azabost.posts.ui.list.PostsActivity" />
+        <activity android:name="com.azabost.posts.ui.details.PostDetailsActivity" />
     </application>
 
 </manifest>
