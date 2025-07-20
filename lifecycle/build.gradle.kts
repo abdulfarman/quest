@@ -1,7 +1,7 @@
 import com.azabost.quest.build.Config
 
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
@@ -10,28 +10,15 @@ plugins {
 }
 
 android {
-    namespace = "com.azabost.quest"
+    namespace = "com.azabost.lifecycle"
     compileSdk = Config.compileSdk
 
     defaultConfig {
-        applicationId = "com.azabost.modularization"
         minSdk = Config.minSdk
-        targetSdk = Config.targetSdk
-        versionCode = 1
-        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
     compileOptions {
         sourceCompatibility = Config.javaVersion
         targetCompatibility = Config.javaVersion
@@ -49,8 +36,6 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":theme"))
-    implementation(project(":analytics"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
