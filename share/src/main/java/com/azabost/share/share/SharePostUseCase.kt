@@ -2,9 +2,9 @@ package com.azabost.share.share
 
 import com.azabost.analytics.Analytics
 import com.azabost.analytics.AnalyticsEvent
-import com.azabost.quest.logging.Logger
-import com.azabost.quest.logging.create
-import com.azabost.quest.posts.model.Post
+import com.azabost.logging.logging.Logger
+import com.azabost.logging.logging.create
+import com.azabost.posts.posts.model.Post
 import javax.inject.Inject
 
 class SharePostUseCase @Inject constructor(
