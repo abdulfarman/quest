@@ -1,4 +1,4 @@
-package com.azabost.lifecycle.lifecycle
+package com.azabost.lifecycle
 
 import android.app.Application
 import com.azabost.quest.share.SharingActivityHolder

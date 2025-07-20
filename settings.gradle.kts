@@ -22,5 +22,5 @@ dependencyResolutionManagement {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "quest"
-include(":app", "theme", ":analytics", ":posts", "config", ":logging", "share",
-    "network", "serialization", "lifecycle")
+include(":app", ":theme", ":analytics", ":posts", ":config", ":logging", ":share",
+    ":network", ":serialization", ":lifecycle", ":time")

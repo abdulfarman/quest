@@ -51,6 +51,13 @@ kotlin {
 dependencies {
     implementation(project(":theme"))
     implementation(project(":analytics"))
+    implementation(project(":lifecycle"))
+    implementation(project(":serialization"))
+    implementation(project(":share"))
+    implementation(project(":time"))
+    implementation(project(":network"))
+    implementation(project(":posts"))
+    implementation(project(":config"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

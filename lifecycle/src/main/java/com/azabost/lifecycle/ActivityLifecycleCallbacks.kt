@@ -1,4 +1,4 @@
-package com.azabost.lifecycle.lifecycle
+package com.azabost.lifecycle
 
 import android.app.Activity
 import android.app.Application
