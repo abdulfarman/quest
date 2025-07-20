@@ -36,7 +36,7 @@ kotlin {
 }
 
 dependencies {
-
+    implementation(project(":common_logger"))
     implementation(project(":config"))
     implementation(project(":analytics")) //Circular dependency with analytics
 

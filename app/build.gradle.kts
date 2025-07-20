@@ -59,6 +59,7 @@ dependencies {
     implementation(project(":posts"))
     implementation(project(":config"))
     implementation(project(":logging"))
+    implementation(project(":common_logger"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

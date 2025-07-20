@@ -1,6 +1,6 @@
 package com.azabost.posts.posts.remote
 
-import com.azabost.posts.posts.model.Post
+import com.azabost.share.share.Post
 import com.azabost.posts.posts.model.PostsRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope

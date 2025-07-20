@@ -1,8 +1,8 @@
 package com.azabost.analytics
 
 import android.os.Bundle
+import com.azabost.common_logger.Logger
 import com.azabost.config.Config
-import com.azabost.logging.logging.Logger
 import javax.inject.Inject
 import javax.inject.Singleton
 

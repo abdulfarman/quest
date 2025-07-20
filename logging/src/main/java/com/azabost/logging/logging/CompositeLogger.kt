@@ -1,5 +1,6 @@
 package com.azabost.logging.logging
 
+import com.azabost.common_logger.Logger
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

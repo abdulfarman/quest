@@ -3,7 +3,7 @@ package com.azabost.lifecycle
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
-import com.azabost.logging.logging.Logger
+import com.azabost.common_logger.Logger
 import com.azabost.share.share.SharingActivityHolder
 import java.lang.ref.WeakReference
 import javax.inject.Inject

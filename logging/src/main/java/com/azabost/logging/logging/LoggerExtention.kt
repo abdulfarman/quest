@@ -1,19 +1,9 @@
 package com.azabost.logging.logging
 
 import com.azabost.analytics.AnalyticsEvent
+import com.azabost.common_logger.Logger
 import kotlin.reflect.KClass
 
-interface Logger {
-    val name: String
-
-    fun debug(message: String)
-    fun info(message: String)
-    fun error(message: String, throwable: Throwable? = null)
-
-    interface Factory {
-        fun create(name: String): Logger
-    }
-}
 
 fun Logger.event(analyticsEvent: AnalyticsEvent) = info("event: ${analyticsEvent.key}")
 
