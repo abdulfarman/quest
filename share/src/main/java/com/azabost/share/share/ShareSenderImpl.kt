@@ -23,9 +23,9 @@ class ShareSenderImpl @Inject constructor(
     private fun createShareTextIntent(text: String): Intent =
         Intent.createChooser(
             Intent().apply {
-                Intent.setAction = Intent.ACTION_SEND
+                action = Intent.ACTION_SEND
                 putExtra(Intent.EXTRA_TEXT, text)
-                Intent.setType = "text/plain"
+                type = "text/plain"
             },
             null,
         )

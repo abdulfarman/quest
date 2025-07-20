@@ -2,9 +2,9 @@ package com.azabost.posts.posts.ui.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.azabost.logging.logging.Logger
+import com.azabost.common_logger.Logger
 import com.azabost.logging.logging.create
-import com.azabost.posts.posts.model.Post
+import com.azabost.share.share.Post
 import com.azabost.posts.posts.model.PostsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ensureActive

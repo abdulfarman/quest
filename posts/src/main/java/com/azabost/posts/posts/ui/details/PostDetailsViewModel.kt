@@ -5,10 +5,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.azabost.analytics.Analytics
 import com.azabost.analytics.AnalyticsEvent
-import com.azabost.logging.logging.Logger
+import com.azabost.common_logger.Logger
 import com.azabost.logging.logging.create
 import com.azabost.logging.logging.event
-import com.azabost.posts.posts.model.Post
+import com.azabost.share.share.Post
 import com.azabost.posts.posts.model.PostsRepository
 import com.azabost.share.share.SharePostUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel

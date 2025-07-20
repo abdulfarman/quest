@@ -26,7 +26,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.azabost.analytics.Analytics
 import com.azabost.analytics.AnalyticsEvent
-import com.azabost.posts.posts.model.Post
+import com.azabost.share.share.Post
 import com.azabost.posts.posts.ui.details.PostDetailsActivity
 import com.azabost.theme.QuestTheme
 import dagger.hilt.android.AndroidEntryPoint
