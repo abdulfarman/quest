@@ -1,4 +1,4 @@
-package com.azabost.quest.network
+package com.azabost.network
 
 import dagger.Module
 import dagger.Provides

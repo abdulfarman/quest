@@ -36,6 +36,10 @@ kotlin {
 }
 
 dependencies {
+    implementation(project(":analytics"))
+    implementation(project(":logging"))
+    implementation(project(":posts"))
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -54,6 +58,7 @@ dependencies {
     // Hilt
     implementation(libs.hilt.core)
     implementation(libs.hilt.android)
+    implementation(project(":posts"))
     ksp(libs.hilt.compiler)
     implementation(libs.javax.inject)
 

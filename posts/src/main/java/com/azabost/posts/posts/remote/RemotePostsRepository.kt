@@ -1,7 +1,7 @@
 package com.azabost.posts.posts.remote
 
-import com.azabost.quest.posts.model.Post
-import com.azabost.quest.posts.model.PostsRepository
+import com.azabost.posts.posts.model.Post
+import com.azabost.posts.posts.model.PostsRepository
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import javax.inject.Inject

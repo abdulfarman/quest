@@ -1,7 +1,7 @@
 package com.azabost.logging.logging
 
 import android.util.Log
-import com.azabost.quest.config.Config
+import com.azabost.config.Config
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

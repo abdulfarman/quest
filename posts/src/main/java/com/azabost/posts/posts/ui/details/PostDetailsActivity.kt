@@ -19,7 +19,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.azabost.quest.posts.model.Post
+import com.azabost.posts.posts.model.Post
 import com.azabost.theme.QuestTheme
 import dagger.hilt.android.AndroidEntryPoint
 

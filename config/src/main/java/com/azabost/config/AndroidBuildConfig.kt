@@ -1,6 +1,5 @@
 package com.azabost.config
 
-import com.azabost.quest.BuildConfig
 import javax.inject.Inject
 
 class AndroidBuildConfig @Inject constructor() : Config {

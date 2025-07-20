@@ -1,7 +1,7 @@
 package com.azabost.posts.posts.remote
 
-import com.azabost.quest.posts.model.Post
-import com.azabost.quest.time.NowProvider
+import com.azabost.posts.posts.model.Post
+import com.azabost.time.time.NowProvider
 import javax.inject.Singleton
 
 @Singleton

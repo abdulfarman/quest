@@ -1,10 +1,10 @@
 package com.azabost.posts.posts.di
 
-import com.azabost.quest.posts.model.PostsRepository
-import com.azabost.quest.posts.remote.PostsService
-import com.azabost.quest.posts.remote.RemotePostsCache
-import com.azabost.quest.posts.remote.RemotePostsRepository
-import com.azabost.quest.time.NowProvider
+import com.azabost.posts.posts.model.PostsRepository
+import com.azabost.posts.posts.remote.PostsService
+import com.azabost.posts.posts.remote.RemotePostsCache
+import com.azabost.posts.posts.remote.RemotePostsRepository
+import com.azabost.time.time.NowProvider
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

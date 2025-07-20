@@ -58,6 +58,7 @@ dependencies {
     implementation(project(":network"))
     implementation(project(":posts"))
     implementation(project(":config"))
+    implementation(project(":logging"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

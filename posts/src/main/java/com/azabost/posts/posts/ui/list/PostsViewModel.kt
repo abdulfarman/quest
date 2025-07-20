@@ -2,10 +2,10 @@ package com.azabost.posts.posts.ui.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.azabost.quest.logging.Logger
-import com.azabost.quest.logging.create
-import com.azabost.quest.posts.model.Post
-import com.azabost.quest.posts.model.PostsRepository
+import com.azabost.logging.logging.Logger
+import com.azabost.logging.logging.create
+import com.azabost.posts.posts.model.Post
+import com.azabost.posts.posts.model.PostsRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.ensureActive
 import kotlinx.coroutines.flow.MutableStateFlow
