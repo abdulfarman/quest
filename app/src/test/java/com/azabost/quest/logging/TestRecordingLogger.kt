@@ -1,5 +1,7 @@
 package com.azabost.quest.logging
 
+import com.azabost.common.Logger
+
 class TestRecordingLoggerFactory : Logger.Factory {
     private val loggers = mutableMapOf<String, TestRecordingLogger>()
 
