@@ -2,7 +2,7 @@ package com.azabost.share
 
 import com.azabost.analytics.Analytics
 import com.azabost.analytics.AnalyticsEvent
-import com.azabost.common_logger.Logger
+import com.azabost.common.Logger
 import com.azabost.logger.create
 import javax.inject.Inject
 

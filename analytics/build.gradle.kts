@@ -36,7 +36,7 @@ kotlin {
 }
 
 dependencies {
-    implementation(project(":common_logger"))
+    implementation(project(":common"))
     implementation(project(":config"))
 
     implementation(libs.androidx.core.ktx)

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.azabost.analytics.Analytics
 import com.azabost.analytics.AnalyticsEvent
-import com.azabost.common_logger.Logger
+import com.azabost.common.Logger
 import com.azabost.logger.create
 import com.azabost.logger.event
 import com.azabost.share.Post

@@ -4,7 +4,7 @@ import com.azabost.posts.model.PostsRepository
 import com.azabost.posts.remote.PostsService
 import com.azabost.posts.remote.RemotePostsCache
 import com.azabost.posts.remote.RemotePostsRepository
-import com.azabost.time.time.NowProvider
+import com.azabost.time.NowProvider
 import dagger.Binds
 import dagger.Module
 import dagger.Provides

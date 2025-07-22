@@ -10,7 +10,7 @@ plugins {
 }
 
 android {
-    namespace = "com.azabost.common_logger"
+    namespace = "com.azabost.common"
     compileSdk = Config.compileSdk
 
     defaultConfig {

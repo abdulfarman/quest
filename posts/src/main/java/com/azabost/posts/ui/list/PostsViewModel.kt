@@ -2,7 +2,7 @@ package com.azabost.posts.ui.list
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.azabost.common_logger.Logger
+import com.azabost.common.Logger
 import com.azabost.logger.create
 import com.azabost.share.Post
 import com.azabost.posts.model.PostsRepository

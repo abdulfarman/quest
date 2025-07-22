@@ -42,7 +42,7 @@ dependencies {
     implementation(project(":share"))
     implementation(project(":time"))
     implementation(project(":analytics"))
-    implementation(project(":common_logger"))
+    implementation(project(":common"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

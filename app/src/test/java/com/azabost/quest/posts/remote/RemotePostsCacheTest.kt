@@ -1,7 +1,8 @@
 package com.azabost.quest.posts.remote
 
-import com.azabost.quest.posts.model.Post
+import com.azabost.posts.remote.RemotePostsCache
 import com.azabost.quest.time.FakeNowProvider
+import com.azabost.share.Post
 import org.junit.Assert.assertEquals
 import org.junit.Test
 import kotlin.time.Duration.Companion.hours

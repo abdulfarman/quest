@@ -38,7 +38,7 @@ kotlin {
 dependencies {
     implementation(project(":analytics"))
     implementation(project(":logger"))
-    implementation(project(":common_logger"))
+    implementation(project(":common"))
 
 
     implementation(libs.androidx.core.ktx)

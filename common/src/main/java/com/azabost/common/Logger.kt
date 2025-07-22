@@ -1,4 +1,4 @@
-package com.azabost.common_logger
+package com.azabost.common
 
 interface Logger {
     val name: String

@@ -1,4 +1,4 @@
-package com.azabost.time.time
+package com.azabost.time
 
 import dagger.Binds
 import dagger.Module

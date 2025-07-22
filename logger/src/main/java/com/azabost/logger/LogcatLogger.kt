@@ -1,7 +1,7 @@
 package com.azabost.logger
 
 import android.util.Log
-import com.azabost.common_logger.Logger
+import com.azabost.common.Logger
 import com.azabost.config.Config
 import dagger.Binds
 import dagger.Module

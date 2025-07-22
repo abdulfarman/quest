@@ -23,4 +23,4 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 rootProject.name = "quest"
 include(":app", ":theme", ":analytics", ":posts", ":config", ":logger", ":share",
-    ":network", ":serialization", ":lifecycle", ":time", ":common_logger")
+    ":network", ":serialization", ":lifecycle", ":time", ":common")

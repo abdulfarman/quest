@@ -1,7 +1,7 @@
 package com.azabost.logger
 
 import com.azabost.analytics.AnalyticsEvent
-import com.azabost.common_logger.Logger
+import com.azabost.common.Logger
 import kotlin.reflect.KClass
 
 
