@@ -1,11 +1,8 @@
-package com.azabost.time
+package com.azabost.time.impl
 
+import com.azabost.time.api.NowProvider
 import javax.inject.Inject
 import javax.inject.Singleton
-
-interface NowProvider {
-    fun now(): Long
-}
 
 @Singleton
 class DefaultNowProvider @Inject constructor() : NowProvider {

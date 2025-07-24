@@ -43,9 +43,4 @@ dependencies {
     ksp(libs.hilt.compiler)
     implementation(libs.javax.inject)
 
-
-    testImplementation(libs.kotest.assertions.core)
-    testImplementation(libs.junit)
-    testImplementation(libs.kotlinx.coroutines.test)
-
 }

@@ -1,6 +1,6 @@
 package com.azabost.quest.time
 
-import com.azabost.time.NowProvider
+import com.azabost.time.impl.NowProvider
 
 class FakeNowProvider(initialNow: Long = System.currentTimeMillis()) : NowProvider {
 

@@ -1,7 +1,7 @@
 package com.azabost.posts.remote
 
 import com.azabost.share.Post
-import com.azabost.time.NowProvider
+import com.azabost.time.api.NowProvider
 import javax.inject.Singleton
 
 @Singleton

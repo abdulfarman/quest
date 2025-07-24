@@ -1,5 +1,7 @@
-package com.azabost.time
+package com.azabost.time.di
 
+import com.azabost.time.api.NowProvider
+import com.azabost.time.impl.DefaultNowProvider
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
