@@ -3,7 +3,6 @@ import com.azabost.quest.build.Config
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
 }
@@ -38,7 +37,6 @@ dependencies {
     implementation(project(":config"))
 
     implementation(libs.androidx.core.ktx)
-    implementation(platform(libs.androidx.compose.bom))
 
     // Hilt
     implementation(libs.hilt.android)

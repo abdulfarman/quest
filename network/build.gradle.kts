@@ -3,7 +3,6 @@ import com.azabost.quest.build.Config
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
@@ -24,7 +23,6 @@ android {
         targetCompatibility = Config.javaVersion
     }
     buildFeatures {
-        compose = true
         buildConfig = true
     }
 }
@@ -60,6 +58,4 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation(libs.kotlinx.coroutines.test)
 
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
 }
