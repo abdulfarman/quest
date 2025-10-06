@@ -4,14 +4,14 @@ name: Android-CI
 
 # Controls when the workflow will run
 on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
   # Triggers the workflow on push or pull request events but only for the "pre-modularization" branch
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -42,7 +42,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+             # Run lint and unit tests
+      # Test cases      
+      - name: Run lint & tests
+        run: ./gradlew lint testDebugUnitTest
 
-      # Run Gradle build (without assembling APK to save time in CI)
-      - name: Build
-        run: ./gradlew build --stacktrace    
+      # Upload test reports (if any)
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/
