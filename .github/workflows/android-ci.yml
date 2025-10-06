@@ -1,39 +1,32 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Android-CI
 
-# Controls when the workflow will run
 on:
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-  
-  # Triggers the workflow on push or pull request events but only for the "pre-modularization" branch
   push:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # -------------------------------
+  # 1️⃣ Build/Test Job
+  # -------------------------------
   build:
-    # The type of runner that the job will run on
+    name: Build & Test
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      # Set up JDK
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: 17
+          cache: gradle
 
-      # Cache Gradle dependencies
-      - name: Cache Gradle
+      - name: Cache Gradle dependencies
         uses: actions/cache@v4
         with:
           path: |
@@ -42,15 +35,58 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
-             # Run lint and unit tests
-      # Test cases      
-      - name: Run lint & tests
-        run: ./gradlew lint testDebugUnitTest
 
-      # Upload test reports (if any)
+      - name: Run lint & unit tests
+        run: ./gradlew lint testDebugUnitTest --stacktrace
+
       - name: Upload Test Reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: app/build/reports/
+
+  # -------------------------------
+  # 2️⃣ Release APK Build Job
+  # -------------------------------
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout source
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Setup JDK for Gradle
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+          cache: gradle
+
+      # 3. Decode Keystore from secret
+      - name: Decode Keystore
+        run: |
+          echo "$KEYSTORE_BASE64" | base64 --decode > app/release-keystore.jks
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+
+      # 4. Make Gradle executable
+      - name: Grant execute permission for Gradle
+        run: chmod +x ./gradlew
+
+      # 5. Build the signed release APK
+      - name: Build Signed Release
+        run: ./gradlew clean assembleRelease
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+
+      # 6. Upload the generated APK as an artifact
+      - name: Upload Release APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release
+          path: app/build/outputs/apk/release/app-release.apk
