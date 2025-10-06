@@ -42,7 +42,15 @@ jobs:
           key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
           restore-keys: |
             ${{ runner.os }}-gradle-
+             # Run lint and unit tests
+      # Test cases      
+      - name: Run lint & tests
+        run: ./gradlew lint testDebugUnitTest
 
-      # Run Gradle build (without assembling APK to save time in CI)
-      - name: Build
-        run: ./gradlew build --stacktrace    
+      # Upload test reports (if any)
+      - name: Upload Test Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/
