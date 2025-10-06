@@ -23,19 +23,40 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            val keystorePassword: String? = System.getenv("KEYSTORE_PASSWORD")
+            val keyAlias: String? = System.getenv("KEY_ALIAS")
+            val keyPassword: String? = System.getenv("KEY_PASSWORD")
+
+            storeFile = file("release-keystore.jks")
+            storePassword = keystorePassword
+            keyAlias = keyAlias
+            keyPassword = keyPassword
+        }
+    }
+
     buildTypes {
-        release {
+        getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+
+            // Use the signing config only if all secrets are available
+            signingConfig = signingConfigs.getByName("release")
+        }
+        getByName("debug") {
+            // Optional: can still sign with debug keys if needed
         }
     }
+
     compileOptions {
         sourceCompatibility = Config.javaVersion
         targetCompatibility = Config.javaVersion
     }
+
     buildFeatures {
         compose = true
         buildConfig = true
